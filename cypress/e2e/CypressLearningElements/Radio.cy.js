@@ -1,7 +1,7 @@
 ///<reference types = "cypress"/>
 "Use strict";
 describe('Radio sceanrios',function(){
-    it('Radio1', function(){
+    it.skip('Radio1', function(){
         //Open url
         cy.visit('https://bulma.io/documentation/form/radio/');
         // Checking that checkbox is checked or not
@@ -9,6 +9,8 @@ describe('Radio sceanrios',function(){
         cy.get('.control label:nth-child(2) [name="answer"]').check().should('be.checked');
         cy.wait(2000)
         cy.get('.control label:nth-child(1) [name="foobar"]').check().should('be.checked');
+        // Remove the comment to see the run time error
+        //cy.get('.control label:nth-child(1) [name="foobar"]').uncheck().should('be.checked');
     })
 })
 
@@ -16,7 +18,7 @@ describe('Radio sceanrios',function(){
     it('Radio2', function(){
         //Open url
         cy.visit('https://jqueryui.com/checkboxradio/#product-selector');
-        cy.wait(2000)
+        cy.wait(5000)
         // How to work with iframe
         cy.get('.demo-frame')
        .then(($iframe) => {
@@ -25,7 +27,11 @@ describe('Radio sceanrios',function(){
                 cy.wrap($body)
                     .find('input[type="radio"]')
                     .check({force:true}).should('be.checked');
-                    cy.wait(2000);
+                    cy.wait(5000);
+
+                    cy.wrap($body).find('#brand-qunit')
+                    .check({force:true}).should('be.checked');
+                    cy.wait(5000);
             });
     })
     })

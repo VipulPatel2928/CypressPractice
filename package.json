@@ -7,11 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "e2e": "cypress open",
     "vp": "cypress run --headed --browser chrome",
-   "vp1": "cypress run --headed --browser chrome --spec \"cypress\\e2e\\Vp Test Folder\\Test1.cy.js\""
+    "vp1": "cypress run --headed --browser chrome --spec \"cypress\\e2e\\Vp Test Folder\\Test1.cy.js\""
   },
   "author": "Vipul",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^10.1.0"
+    "cypress": "^10.1.0",
+    "cypress-xpath": "^2.0.0"
+  },
+  "dependencies": {
+    "cypress-real-events": "^1.7.1"
   }
 }

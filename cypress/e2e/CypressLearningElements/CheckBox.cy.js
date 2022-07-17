@@ -2,13 +2,12 @@
 "Use strict";
 
 describe('Check box sceanrios',function(){
-    it('Checkbox1', function(){
+    it.skip('Checkbox1', function(){
         //Open url
         cy.visit('https://accounts.google.com/signup');
         // Checking that checkbox is checked or not
         cy.get('[type="checkbox"]').check().should('be.checked');
         cy.get('[type="checkbox"]').check().should('be.checked');
-
         cy.get('[type="checkbox"]').uncheck().should('not.be.checked');
         cy.get('[type="checkbox"]').uncheck().should('not.be.checked');
 
@@ -19,7 +18,7 @@ describe('Check box sceanrios',function(){
 })
 
 describe('Check box sceanrios',function(){
-    it('Checkbox2', function(){
+    it.skip('Checkbox2', function(){
         //Open url
         cy.visit('https://designsystem.digital.gov/components/checkbox/');
         cy.wait(2000);
