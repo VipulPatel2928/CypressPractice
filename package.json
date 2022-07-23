@@ -13,9 +13,11 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.1.0",
+    "cypress-file-upload": "^5.0.8",
     "cypress-xpath": "^2.0.0"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.5",
     "cypress-real-events": "^1.7.1"
   }
 }

@@ -29,3 +29,5 @@
 //         return win.open(url, '_self'); 
 //       });
 // });
+
+import 'cypress-file-upload';
