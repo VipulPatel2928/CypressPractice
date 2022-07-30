@@ -23,7 +23,8 @@ describe('Drop Down',function(){
         cy.get(' input[placeholder="Experience in years"]').type('14 Years',{force:true});
         cy.get('.full.modal-ref-class').find('span').contains('4 Years').click();
        
-        //cy.get('.full.modal-ref-class').click().contains('Customer Service');
+        cy.wait(3000);
+
     })
 
     it('DropDown2', function(){
@@ -35,7 +36,16 @@ describe('Drop Down',function(){
 
         cy.get('#year').select('2000').should('have.value','2000');
        
-       
+        cy.wait(3000);
+    })
+
+    it('DropDown3', function(){
+        //Open url
+        cy.visit('https://www.google.com/');
+        cy.get('input[name="q"]').type('Cypress');
+        cy.wait(5000);
+        cy.contains('cypress tree').click();
+        cy.wait(3000);
     })
 })
 
