@@ -9,10 +9,17 @@ describe('Datepicket Test Cases', () => {
 
         cy.visit('https://www.southalltravel.co.uk/');
 
+       // cy.get('#depdateit').type('30/07/2029',{force: true});
+
+       // cy.wait(5000);
+
         //Used require function to get the corrent date
         const dayjs = require('dayjs');
+
+        cy.log('without format:',dayjs);
+
         // Date printed with DD/MM/YYYY format
-        cy.log(dayjs().format('DD/MM/YYYY'))  //Prints todays date 
+        cy.log(dayjs().format('DD/MM/YYYY')) //Prints todays date 
         // Below statements are used to separate Day, Month and Year from the Date
         cy.log('Day:',dayjs().format('DD'));
         cy.log('Month:',dayjs().format('MM'));
@@ -24,10 +31,14 @@ describe('Datepicket Test Cases', () => {
         month =  Number.parseInt(dayjs().format('MM'));
         year =  Number.parseInt(dayjs().format('YYYY'));
         // Performed operation on number
-        cy.log('Arithmetic Operation On number:',day+1);
+        cy.log('Arithmetic Operation On number:',day);
 
         if(day<=9){
             depDay = '0'+day.toString();
+            cy.log('Dep Date:',depDay)
+        }
+        else{
+            depDay = day.toString();
             cy.log('Dep Date:',depDay)
         }
 
@@ -41,7 +52,10 @@ describe('Datepicket Test Cases', () => {
             depMonth = '0'+month.toString();
             cy.log('Dep Month:',depMonth)
         }
-
+        else{
+        depMonth = month.toString();
+            cy.log('Dep Month:',depMonth)
+        }
         
         if(day<=9){
             retDay = '0'+(day).toString();
@@ -72,10 +86,14 @@ describe('Datepicket Test Cases', () => {
         cy.get('#depdateit').click();
         cy.wait(1000);
         cy.get('.ui-state-default').contains(day.toString()).click();
-        cy.get('#depdateit').should('have.value',depDay+'/'+depMonth+'/'+year.toString())
+        cy.wait(1000);
+        //cy.get('#depdateit').should('have.value',depDay+'/'+depMonth+'/'+year.toString())
+
+        cy.wait(3000);
+
         cy.get('.ui-datepicker-next.ui-corner-all').click();
         cy.get('.ui-state-default').contains(day.toString()).click();
-        cy.get('#retdateit').should('have.value',retDay+'/'+retMonth+'/'+year.toString())
+       // cy.get('#retdateit').should('have.value',retDay+'/'+retMonth+'/'+year.toString())
 
         // cy.get('#retdateit').clear().type('03/08/2022',{force: true}).should('have.value','03/08/2022');;
     })
@@ -85,6 +103,15 @@ describe('Datepicket Test Cases', () => {
         const dayjs = require('dayjs');
         // Date printed with DD/MM/YYYY format
         cy.log(dayjs().format('DD/MM/YYYY'))  //Prints todays date 
+
+        cy.log(dayjs().format('DD/MMM/YYYY'))  //Prints todays date 
+
+        cy.log('Day:',dayjs().format('DD'));
+        cy.log('Month:',dayjs().format('MM'));
+        cy.log('Month:',dayjs().format('M'));
+        cy.log('Month:',dayjs().format('MMM'));
+        cy.log('Month:',dayjs().format('MMMMMMMMM'));
+        cy.log('Year:',dayjs().format('YYYY'));
 
         cy.visit('https://jqueryui.com/datepicker/');
 
@@ -96,6 +123,8 @@ describe('Datepicket Test Cases', () => {
                      .find('input#datepicker')
                      .type(dayjs().format('DD/MM/YYYY')).should('have.value',dayjs().format('DD/MM/YYYY'));
              });
+
+             cy.wait(3000);
     })
 })
 
