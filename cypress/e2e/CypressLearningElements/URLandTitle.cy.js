@@ -19,6 +19,23 @@ it('Use of url', ()=>{
 
 })
 
+
+it('Use of url1', ()=>{
+
+    cy.visit('https://www.jiomart.com/');
+
+    cy.url().should('include','jiomart');
+
+    cy.contains("Groceries").realHover('mouse');
+
+    cy.wait(3000);
+
+    cy.contains("Pets").click({ force: true });
+
+    cy.url().should('include','groceries');
+
+})
+
 it('Use of Title', ()=>{
 
     cy.visit('https://www.jiomart.com/');
@@ -32,6 +49,21 @@ it('Use of Title', ()=>{
     cy.contains("Pets").click({ force: true });
 
     cy.title().should('eq','Pets - JioMart');
+})
+
+it('Use of Title1', ()=>{
+
+    cy.visit('https://www.jiomart.com/');
+
+    cy.title().should('include','Buy Grocery Online');
+
+    cy.contains("Groceries").realHover('mouse');
+
+    cy.wait(3000);
+
+    cy.contains("Pets").click({ force: true });
+
+    cy.title().should('include','Pets');
 })
 
 })

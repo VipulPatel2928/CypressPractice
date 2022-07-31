@@ -9,6 +9,8 @@ it('BACK FORWARD Case 1', ()=>{
     cy.wait(1000);
     cy.contains('Register').click();
     cy.wait(1000);
+    cy.reload();
+    cy.wait(1000);
     cy.contains('Log in').click();
     cy.wait(1000);
     cy.get('.wishlist-label').click();
