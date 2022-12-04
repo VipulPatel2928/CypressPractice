@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.5",
+    "cypress-downloadfile": "^1.2.3",
     "cypress-real-events": "^1.7.1"
   }
 }
