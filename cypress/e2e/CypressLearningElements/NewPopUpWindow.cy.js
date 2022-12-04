@@ -1,7 +1,7 @@
 ///<reference types = "cypress"/>
 "Use strict";
-describe('iFrame scenarios 1',function(){
-    it('iFrame 1', function(){
+describe('New Popup Window',function(){
+    it('New Popup Window Test Case 1', function(){
         //Open url
         cy.visit('https://www.convertflow.com/campaigns/popup-examples-templates');
         cy.wait(2000)

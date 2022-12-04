@@ -1,9 +1,9 @@
 ///<reference types="cypress"/>
 "use strict";
 
-describe('Drag and Drop',function(){
+describe('Slider',function(){
 
-it('Drag and Drop Case 1', ()=>{
+it('Slider Test Case 1', ()=>{
 
     cy.visit('https://jqueryui.com/slider/');
 

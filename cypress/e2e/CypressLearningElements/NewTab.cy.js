@@ -1,7 +1,7 @@
 ///<reference types = "cypress"/>
 "Use strict";
-describe('iFrame scenarios 1',function(){
-    it('iFrame 1', function(){
+describe('New Tab Window',function(){
+    it('New Tab Window Test Case 1', function(){
         //Open url
         cy.visit('http://en-gb.facebook.com/');
         cy.wait(2000)

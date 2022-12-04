@@ -1,9 +1,9 @@
 ///<reference types="cypress"/>
 "use strict";
 
-describe('BACK FORWARD',function(){
+describe('Page Reload',function(){
 
-it('BACK FORWARD Case 1', ()=>{
+it('Page Reload Case 1', ()=>{
 
     cy.visit('https://www.jiomart.com/');
     cy.wait(5000);

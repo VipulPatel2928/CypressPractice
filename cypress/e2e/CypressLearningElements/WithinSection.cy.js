@@ -5,7 +5,7 @@ const log = cy.log
 
 describe('Verify With in Section', function () {
 
-    it('Wiht in Section', () => {
+    it('With in Section', () => {
         //Open URL
         cy.visit('https://testautomationpractice.blogspot.com/');
 
