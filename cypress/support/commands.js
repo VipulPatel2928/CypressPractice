@@ -33,3 +33,24 @@
 import 'cypress-file-upload';
 require('@4tw/cypress-drag-drop')
 require('cypress-downloadfile/lib/downloadFileCommand')
+
+Cypress.Commands.add('personalinfo', () => {
+
+    cy.log('You have called the personal info function')
+})
+
+Cypress.Commands.add('addition', (a, b) => {
+
+    cy.log('Adding two numbers :' + (a + b))
+})
+
+
+Cypress.Commands.add('openpage', (url) => {
+
+    cy.visit(url)
+})
+
+Cypress.Commands.add('waitforsecs', (varsec) => {
+
+    cy.wait(varsec)
+})
