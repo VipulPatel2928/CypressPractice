@@ -52,5 +52,5 @@ Cypress.Commands.add('openpage', (url) => {
 
 Cypress.Commands.add('waitforsecs', (varsec) => {
 
-    cy.wait(varsec)
+    cy.wait(varsec*1000)
 })
