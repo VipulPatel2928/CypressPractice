@@ -8,13 +8,13 @@
     "e2e": "cypress open",
     "vp": "cypress run --headed --browser chrome",
     "vp1": "cypress run --headed --browser chrome --spec \"cypress\\e2e\\Vp Test Folder\\Test1.cy.js\"",
-    "TestRetries" : "cypress run --headed --browser chrome --spec \"cypress\\e2e\\CypressLearningElements\\TestRetries.cy.js\""
+    "TestRetries": "cypress run --headed --browser chrome --spec \"cypress\\e2e\\CypressLearningElements\\TestRetries.cy.js\""
   },
   "author": "Vipul",
   "license": "ISC",
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.2",
-    "cypress": "^10.1.0",
+    "cypress": "^10.11.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-xpath": "^2.0.0"
   },
